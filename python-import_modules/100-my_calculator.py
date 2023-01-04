@@ -8,14 +8,14 @@ if __name__ == "__main__":
     operator = argv[2]
     n1 = int(argv[1])
     n2 = int(argv[3])
-    if operator is "+":
-        print("{:d} + {:d} = {:d}", format(n1, n2, add(n1, n2)))
-    elif operator is "-":
-        print("{:d} - {:d} = {:d}", format(n1, n2, sub(n1, n2)))
-    elif operator is "*":
-        print("{:d} * {:d} = {:d}", format(n1, n2, mul(n1, n2)))
-    elif operator is "/":
-        print("{:d} / {:d} = {:d}", format(n1, n2, div(n1, n2)))
+    if operator == "+":
+        print("{} + {} = {}".format(n1, n2, add(n1, n2)))
+    elif operator == "-":
+        print("{:d} - {:d} = {:d}".format(n1, n2, sub(n1, n2)))
+    elif operator == "*":
+        print("{:d} * {:d} = {:d}".format(n1, n2, mul(n1, n2)))
+    elif operator == "/":
+        print("{:d} / {:d} = {:d}".format(n1, n2, div(n1, n2)))
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         print(1)
