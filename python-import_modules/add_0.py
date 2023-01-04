@@ -1,5 +1,3 @@
 #!/usr/bin/python3
-def add(a, b):
-    return a + b
-def prnt():
-    print("#pythoniscool")
+import sys
+sys.stdout.write("#pythoniscool\n")
