@@ -4,7 +4,7 @@ if __name__ == "__main__":
     from sys import argv
     if len(argv) != 4:
         print("./100-my_calculator.py <a> <operator> <b>")
-        print(1)
+        exit(1)
     operator = argv[2]
     n1 = int(argv[1])
     n2 = int(argv[3])
@@ -18,4 +18,4 @@ if __name__ == "__main__":
         print("{:d} / {:d} = {:d}".format(n1, n2, div(n1, n2)))
     else:
         print("Unknown operator. Available operators: +, -, * and /")
-        print(1)
+        exit(1)
