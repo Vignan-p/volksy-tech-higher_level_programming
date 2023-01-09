@@ -7,5 +7,5 @@ def safe_print_list_integers(my_list=[], x=0):
             r = r + 1
         except:
             pass
-        print("")
-        return r
+    print("")
+    return r
