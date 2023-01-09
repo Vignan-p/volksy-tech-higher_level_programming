@@ -3,9 +3,9 @@ def safe_print_list(my_list=[], x = 0):
     r = 0
     for i in range(0, x):
         try:
-            print("{:d}".format(my_list[i]), end="")
+            print("{:d}".format(my_list[r]), end="")
             r = r + 1
-    except:
-        pass
+        except:
+            pass
     print("")
     return r
