@@ -3,7 +3,8 @@
 
 
 class Square:
-    """square size"""
+    def __init__(self, size=0):
+        """square size"""
         self.__size = size
 
     def size(self):
@@ -11,6 +12,7 @@ class Square:
         return (self.__size)
 
     def size(self, value):
+        """value"""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
