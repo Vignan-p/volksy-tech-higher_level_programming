@@ -1,17 +1,17 @@
 #!/usr/bin/python3
-"""json"""
+"""Script"""
 import sys
-save_to_json_file = __import__(5-save_to_json_file.py).save_to_json_file
-load_from_json_file = __import__(6-load_from_json_file.py).load_from_json_file
+save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
+
+name = "add_item.json"
+load = []
 
 try:
-    load_file = load_from_json_file("add_item.json")
+    load = load_from_json_file(name)
 except:
-    load_file = []
+    pass
 
-arg = len(sys.argv)
-for i in range(1, arg):
-    load_file.append(sys.argv[i])
-
-save_to_json_file(load_file, "add_item.json")
-
+for i in range(1, len(sys.argv)):
+    load.append(sys.argv[i])
+save_to_json_file(load, name)
