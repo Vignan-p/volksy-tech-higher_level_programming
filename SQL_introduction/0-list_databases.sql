@@ -1,2 +1,2 @@
-/*SHOW*/
+-- SHOW
 SHOW DATABASES;
