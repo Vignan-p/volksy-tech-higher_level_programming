@@ -8,8 +8,7 @@ import MySQLdb
 if __name__ == "__main__":
     db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
     c = db.cursor()
-    sql = "SELECT * FROM `states` WHERE name = '%s'"
-    val = (sys.argv[4], )
-    c.execute(sql, val)
+    c.execute("SELECT * FROM `states`")
     for i in c:
-        print(i)
+        if i[1] == sys.argv[4]:
+            print(i)
