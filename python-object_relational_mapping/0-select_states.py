@@ -4,7 +4,11 @@
 
 def sql_cmd(args):
     """Connect to DATABASE"""
-    db = MySQLdb.connect(host='localhost', port=3306, user=args[0], passwd=args[1], db=args[2])
+    db = MySQLdb.connect(host='localhost', 
+            port=3306, 
+            user=args[0], 
+            passwd=args[1], 
+            db=args[2])
     c = db.cursor()
     c.execute("SELECT * FROM states ORDER BY id ASC")
     for i in c:
