@@ -3,9 +3,7 @@ import sys
 
 
 def print_status():
-    '''
-        Printing the status of the request
-    '''
+    '''Printing the status of the request'''
     counter = 0
     size = 0
     file_size = 0
