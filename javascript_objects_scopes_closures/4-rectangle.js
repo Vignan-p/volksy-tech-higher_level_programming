@@ -1,5 +1,4 @@
 #!/usr/bin/node
-// class Rectangle that defines a rectangle
 class Rectangle {
   constructor (w, h) {
     if (w > 0 && h > 0) {
@@ -8,22 +7,29 @@ class Rectangle {
     }
   }
 
+  // Method to print the rectangle using 'X'
   print () {
-    for (let i = 0; i < this.height; i++) {
-      console.log('X'.repeat(this.width));
+    let row = '';
+    let i = 0;
+    for (i = 0; i < this.width; i++) {
+      row += 'X';
+    }
+    for (i = 0; i < this.height; i++) {
+      console.log(row);
     }
   }
 
+  // Method to switch the height and width of a rectangle
   rotate () {
-    const aux = this.width;
-    this.width = this.height;
-    this.height = aux;
+    const holder = this.height;
+    this.height = this.width;
+    this.width = holder;
   }
 
+  // Method that multiplies the width and height by 2
   double () {
-    this.width *= 2;
     this.height *= 2;
+    this.width *= 2;
   }
 }
-
 module.exports = Rectangle;

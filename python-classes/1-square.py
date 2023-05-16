@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""size class for square"""
+'''size class for square'''
 
 
 class Square:
-    """square class"""
+    '''square class'''
     def __init__(self, size):
-        """Size of square"""
+        '''size of square'''
         self.__size = size

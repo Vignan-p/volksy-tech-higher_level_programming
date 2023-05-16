@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""JSON"""
+'''write a file'''
 import json
 
 
 def load_from_json_file(filename):
-    """load from json"""
-    with open(filename, mode='r', encoding="utf-8") as f:
-        return (json.load(f))
+    '''file name'''
+
+    with open(filename, mode='r', encoding='UTF-8') as f:
+        return json.load(f)

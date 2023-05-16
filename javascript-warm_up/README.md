@@ -1,1 +1,2 @@
-java script is amazing
+#!/usr/bin/node
+hii

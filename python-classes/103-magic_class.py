@@ -11,6 +11,7 @@ class MagicClass:
 
     def __init__(self, radius=0):
         """Initialize a MagicClass.
+
         Arg:
             radius (float or int): The radius of the new MagicClass.
         """

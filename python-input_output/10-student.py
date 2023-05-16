@@ -1,26 +1,21 @@
 #!/usr/bin/python3
-"""10-student Module"""
+"""Defines a class student."""
 
 
 class Student:
-    """Student Class"""
+    """Represent a student."""
+
     def __init__(self, first_name, last_name, age):
-        """Initializer method"""
+        """Initailize a new Student."""
+
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
     def to_json(self, attrs=None):
-        """
-        Retrieves a dictionary representation of
-        a Student instance
-        """
-        dict = vars(self)
-        if attrs is None:
-            return dict
+        """Get a dictionary representation  of the Student."""
 
-        studentInfo = {}
-        for item in attrs:
-            if item in dict:
-                studentInfo[item] = dict[item]
-        return studentInfo
+        if (type(attrs) == list and
+                all(type(ele) == str for ele in attrs)):
+            return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
+        return self.__dict__

@@ -1,1 +1,2 @@
-Python code
+#!/usr/bin/python3
+hiii

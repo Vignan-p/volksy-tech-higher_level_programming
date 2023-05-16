@@ -1,37 +1,39 @@
 #!/usr/bin/python3
-"""creating class"""
+"""class"""
 
 
 class Square:
-    """Square with private instance attribute and instantiation"""
+    """Access and update private attribute"""
+
     def __init__(self, size=0):
-        """Initialize data"""
-        self.__size = size
+        self.size = size
 
     def area(self):
-        """Return square area"""
-        return (self.__size ** 2)
-
-    def my_print(self):
-        """Print square with # to stdout"""
-        if self.__size <= 0:
-            print()
-        else:
-            for i in range(self.__size):
-                for j in range(self.__size):
-                    print('#', end='')
-                print()
+        """area of the square"""
+        return(self.__size * self.__size)
 
     @property
     def size(self):
-        """Retrieve size"""
-        return (self.__size)
+        return self.__size
 
     @size.setter
     def size(self, value):
-        """Sets size and handles errors"""
-        if type(value) is not int:
+        """constructor"""
+
+        if type(value) != int:
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
+
+    def area(self):
+        a = self.__size * self.__size
+        return a
+
+    def my_print(self):
+        if self.__size == 0:
+            print('')
+        for i in range(0, self.__size):
+            for j in range(0, self.__size):
+                print('#', end='')
+            print()

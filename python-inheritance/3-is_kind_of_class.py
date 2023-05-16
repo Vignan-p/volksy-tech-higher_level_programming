@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""Defines a class and inherited class-checking function."""
+'''list'''
 
 
 def is_kind_of_class(obj, a_class):
-    """ def"""
+    '''size of a class'''
     if isinstance(obj, a_class):
         return True
-    return False
+    else:
+        return False

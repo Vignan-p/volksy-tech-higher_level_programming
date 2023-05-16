@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""json"""
+'''write a file'''
 
 
 def class_to_json(obj):
-    """json"""
+    '''create a file'''
     return obj.__dict__

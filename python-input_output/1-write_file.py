@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-"""write a file"""
+'''string'''
 
 
 def write_file(filename="", text=""):
-    """Write"""
-    if filename:
-        with open(filename, mode='w', encoding="utf-8") as f:
-            return (f.write(text))
+    '''file name'''
+    with open(filename, mode='w', encoding='UTF-8') as f:
+        return (f.write(text))

@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""creating class """
+"""creating class"""
 
 
 class Square:
     """Square with private instance attribute and instantiation"""
+
     def __init__(self, size=0, position=(0, 0)):
         """Initialize data"""
         self.size = size
@@ -24,7 +25,7 @@ class Square:
             for j in range(self.__position[0]):
                 print(" ", end="")
             for k in range(self.__size):
-                print('#', end='')
+                    print('#', end='')
             print()
 
     @property
