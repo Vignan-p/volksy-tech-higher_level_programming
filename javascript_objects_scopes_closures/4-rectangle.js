@@ -1,5 +1,6 @@
 #!/usr/bin/node
-class Rectangle {
+// JS Script
+module.exports = class Rectangle {
   constructor (w, h) {
     if (w > 0 && h > 0) {
       this.width = w;
@@ -7,29 +8,18 @@ class Rectangle {
     }
   }
 
-  // Method to print the rectangle using 'X'
   print () {
-    let row = '';
-    let i = 0;
-    for (i = 0; i < this.width; i++) {
-      row += 'X';
-    }
-    for (i = 0; i < this.height; i++) {
-      console.log(row);
+    for (let i = 0; i < this.height; i++) {
+      console.log('X'.repeat(this.width));
     }
   }
 
-  // Method to switch the height and width of a rectangle
   rotate () {
-    const holder = this.height;
-    this.height = this.width;
-    this.width = holder;
+    this.width = [this.height, this.height = this.width][0];
   }
 
-  // Method that multiplies the width and height by 2
   double () {
-    this.height *= 2;
     this.width *= 2;
+    this.height *= 2;
   }
-}
-module.exports = Rectangle;
+};
